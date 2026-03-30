@@ -154,7 +154,7 @@ Select * from student Where subject = 'Che' and marks = 90;
 
 
 
-Q9.Write a SQL query to fetch the student details who have scored greater than 80 in Phy or Che.
+-- Q9.Write a SQL query to fetch the student details who have scored greater than 80 in Phy or Che.
 
 Create table Student(Studid number,NAME varchar2(10),Subject varchar2(20),marks number);
 insert into student values(1,'A','Phy','90');
@@ -166,3 +166,18 @@ insert into student values(4,'D','Phy','75');
 insert into student values(4,'D','Math','90');
 
 Select * from Student Where marks > 80 and subject IN ( 'Phy', 'Che');
+
+
+
+
+-- Q10.Write an SQL Query to fetch the empname whose salary is Rs.100 and empid is greater than 3.
+
+Create table employee(empid number,empname varchar2(10),salary number);
+insert into employee values(1,'A',100);
+insert into employee values(2,'B',200);
+insert into employee values(3,'C',100);
+insert into employee values(4,'D',300);
+insert into employee values(5,'E',100);
+insert into employee values(6,'F',400); 
+
+Select empname from employee Where Salary = 100 and empid >  3;
