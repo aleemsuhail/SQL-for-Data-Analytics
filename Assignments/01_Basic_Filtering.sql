@@ -268,3 +268,32 @@ Select name from student Where marks < = 90;
 Select name from student Where marks > 50 and marks < 95;
 
 Select name from student Where marks between 50 and 95;
+
+
+
+
+
+-- Q15. Write a SQL query to fetch the records where 
+a>ID is null
+b>NAME is null
+c>ID is not null
+d>NAME is not null
+e>ID and NAME both are null
+f>Either ID is null or NAME is null.
+
+CREATE TABLE STUD1(ID NUMBER,NAME VARCHAR2(10));
+INSERT INTO STUD1 VALUES(NULL,'A');
+INSERT INTO STUD1 VALUES(1,NULL);
+INSERT INTO STUD1 VALUES(NULL,NULL);
+
+Select * from STUD1 Where ID is NULL;
+
+Select * from STUD1 Where NAME is NULL;
+
+Select * from STUD1 Where ID is NOT NULL;
+
+Select * from STUD1 Where NAME is NOT NULL;
+
+Select * from STUD1 Where ID is NULL and NAME is NULL;
+
+Select * from STUD1 Where ID is NULL or NAME is NULL;
