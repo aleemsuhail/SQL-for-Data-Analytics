@@ -96,3 +96,34 @@ Select Count (*), Count(mgrid) from employee;
 Since count (*) is greater than Count(Mgrid) it means mgrid column has null values.
 
 ----------------------------------------------------------------------------------------------------------------------------------
+
+Q5.Write a SQL query to fetch distinct 
+a)empid
+b)empname
+c)dept
+d)empid,empname
+e)empname,dept
+
+Create table Dept(Empid number,Empname varchar2(10),Dept varchar2(10));
+insert into dept values(1,'A','HR');
+insert into dept values(2,'B','HR');
+insert into dept values(3,'C','SALES');
+insert into dept values(4,'D','SALES');
+insert into dept values(5,'E','SALES');
+insert into dept values(6,'F',NULL);
+insert into dept values(7,'G',NULL);
+insert into dept values(1,'A','HR');
+insert into dept values(2,'B','HR');
+insert into dept values(3,'C','SALES');
+
+Select distinct dept from dept;
+
+Select distinct empid from dept;
+
+Select distinct empname from dept;
+
+Select distinct empid, empname from dept;
+
+Select distinct empname, dept from dept;
+
+---------------------------------------------------------------------------------------------------------------------------
