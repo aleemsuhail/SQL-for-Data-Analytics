@@ -77,3 +77,22 @@ Select Count('Mgrid') from employee; - This gives the total count of records in 
 Select Count (Empid) from employee; - This gives the total count of records in the empid column (6) excluding the NULL values.
 
 Select Count (empname) from employee; - This gives the total count of records in the empname column (6) excluding the NULL values. 
+
+  -----------------------------------------------------------------------------------------------------------------------------
+
+Q4.Write an SQL query to find if NULL record exists in mgrid column.
+
+Create table employee(empid number,empname varchar2(10),Mgrid number);
+insert into employee values(1,'A',4);
+insert into employee values(2,'B',5);
+insert into employee values(3,'C',6);
+insert into employee values(4,'D',5);
+insert into employee values(5,'E',null);
+insert into employee values(6,'F',null);
+
+Select * from employee Where Mgrid is NULL;
+
+Select Count (*), Count(mgrid) from employee;
+Since count (*) is greater than Count(Mgrid) it means mgrid column has null values.
+
+----------------------------------------------------------------------------------------------------------------------------------
