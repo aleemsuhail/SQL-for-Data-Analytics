@@ -50,3 +50,30 @@ Select Count (distinct empname) from dept;
 Select Count(*) from dept Where location = 'Delhi';
 
 Select Count(*) from dept Where location = 'Delhi' and UPPER (Dept) = 'HR' ;
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Q3.Explain the output of count(*),count(mgrid),count('mgrid'),count(empid) 
+and count(empname).
+
+Create table employee(empid number,empname varchar2(10),Mgrid number);
+insert into employee values(1,'A',4);
+insert into employee values(2,'B',5);
+insert into employee values(3,'C',6);
+insert into employee values(4,'D',5);
+insert into employee values(5,'E',null);
+insert into employee values(6,'F',null);
+
+
+Select Count(*) from employee; - This gives the total count of records (6) in the table including the null values.
+
+Select Count (Mgrid) from employee; - This gives the total count of records in the column Mgrid (4) excluding the NULL values.
+
+Select Count('Mgrid') from employee; - This gives the total count of records in the table (6) including the NON-NULL values.
+
+Select Count (Empid) from employee; - This gives the total count of records in the empid column (6) excluding the NULL values.
+
+Select Count (empname) from employee; - This gives the total count of records in the empname column (6) excluding the NULL values. 
