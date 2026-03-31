@@ -190,3 +190,19 @@ Select Count(*) from student Where result = 'Pass';
 
 -------------------------------------------------------------------------------------------------------------------
 
+Q9.Explain why for the below query output of count(*),count(mgrid),count(distinct mgrid) are different.
+Create table employee(empid number,empname varchar2(10),Mgrid number);
+insert into employee values(1,'A',4);
+insert into employee values(2,'B',5);
+insert into employee values(3,'C',6);
+insert into employee values(4,'D',5);
+insert into employee values(5,'E',null);
+insert into employee values(6,'F',null);
+
+Select Count(*) from employee; = 6 because it counts the total number of records in a table including thr null values.
+
+Select Count(mgrid) from employee; = 4 because it counts the total number of records in this particular column excluding null values.
+
+Select Count (distinct mgrid) from employee; = 3 , because it tells the count of distinct mgrid values.
+
+-------------------------------------------------------------------------------------------------------------------
