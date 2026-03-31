@@ -271,3 +271,20 @@ Select Count (distinct NVL(ID, 0)) from STUD1;
 Select Count (distinct NVL (NAME, 'NA')) from STUD1;
 
 -----------------------------------------------------------------------------------------------------------------------------
+
+Q12. Write a SQL query to fetch the records where 
+a>count of distinct ID
+b>count of distinct NAME
+c>count of distinct ID considering NULL records as well
+d>count of distinct NAME considering NULL records as well
+
+CREATE TABLE STUD1(ID NUMBER,NAME VARCHAR2(10));
+INSERT INTO STUD1 VALUES(NULL,'A');
+INSERT INTO STUD1 VALUES(1,NULL);
+INSERT INTO STUD1 VALUES(NULL,NULL);
+
+Select Count (distinct ID) from STUD1;
+Select Count (distinct NAME) from STUD1;
+Select Count (distinct NVL(ID, 0)) from STUD1;
+Select Count (distinct NVL(NAME, 'NA')) from STUD1;
+---------------------------------------------------------------------------------------------------------------------------------
