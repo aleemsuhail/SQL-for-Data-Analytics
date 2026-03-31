@@ -127,3 +127,16 @@ Select distinct empid, empname from dept;
 Select distinct empname, dept from dept;
 
 ---------------------------------------------------------------------------------------------------------------------------
+
+Q6.Write a SQL query to count the number of employees whose salary is Rs.100 
+Create table employee(empid number,empname varchar2(10),salary number);
+insert into employee values(1,'A',100);
+insert into employee values(2,'B',200);
+insert into employee values(3,'C',100);
+insert into employee values(4,'D',300);
+insert into employee values(5,'E',100);
+insert into employee values(6,'F',400);
+
+Select Count(*) from employee Where Salary = 100;
+
+----------------------------------------------------------------------------------------------------------------------------
