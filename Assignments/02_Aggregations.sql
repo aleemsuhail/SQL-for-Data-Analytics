@@ -156,3 +156,37 @@ select count(*),count(empid),count(empname),count(mgrid) from employee;
 
 ---------------------------------------------------------------------------------------------------------------------------
 
+Q8.Write a query to display 
+a)the total count of records,
+b)total count of records with subject as Maths,
+c)total count of records with subject as Phy,
+d)total count of records with subject as Chem,
+e)total count of records with result as Pass,
+f)total count of records with result as Fail
+
+Create table student(id number,name varchar2(10),subject varchar2(10),result varchar2(10));
+insert into student values(1,'A','Maths','Pass');
+insert into student values(1,'A','Phy','Pass');
+insert into student values(1,'A','Chem','Fail');
+insert into student values(1,'A','Chem','Fail');
+insert into student values(2,'B','Maths','Pass');
+insert into student values(2,'B','Phy','Fail');
+insert into student values(2,'B','Chem','Fail');
+insert into student values(3,'C','Maths','Pass');
+insert into student values(3,'C','Phy','Pass');
+insert into student values(3,'C','Chem','Fail');
+
+Select Count(*) from student;
+
+Select Count(*) from student Where Subject = 'Maths';
+
+Select Count(*) from student Where Subject = 'Phy';
+
+Select Count(*) from student Where Subject = 'Chem';
+
+Select Count(*) from student Where result = 'Fail';
+
+Select Count(*) from student Where result = 'Pass';
+
+-------------------------------------------------------------------------------------------------------------------
+
