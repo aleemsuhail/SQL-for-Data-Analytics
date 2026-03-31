@@ -206,3 +206,13 @@ Select Count(mgrid) from employee; = 4 because it counts the total number of rec
 Select Count (distinct mgrid) from employee; = 3 , because it tells the count of distinct mgrid values.
 
 -------------------------------------------------------------------------------------------------------------------
+
+Q10.For the below employee table,insert data in such a way that the 
+output of count(*),count(empid) and count(distinct empname) must be same.
+
+Create table employee(empid number,empname varchar2(10),salary number);
+Insert into employee values (1, 'Akram', 100);
+Insert into employee values (2, 'Jhon', 200);
+Insert into employee values (3, 'Waseem', 300);
+
+--------------------------------------------------------------------------------------------------------------------
