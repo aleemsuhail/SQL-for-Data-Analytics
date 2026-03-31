@@ -216,3 +216,58 @@ Insert into employee values (2, 'Jhon', 200);
 Insert into employee values (3, 'Waseem', 300);
 
 --------------------------------------------------------------------------------------------------------------------
+
+
+Q11. Write a SQL query to fetch the records where 
+a>ID is null
+b>NAME is null
+c>ID is not null
+d>NAME is not null
+e>ID and NAME both are null
+f>Either ID is null or NAME is null.
+g>total count of null records in ID column.
+h>total count of null records in NAME column.
+i>total count of records were ID and NAME both are null.
+j>display the distinct IDs
+k>display the distinct NAME
+l>count of distinct ID
+m>count of distinct NAME
+n>count of distinct ID considering NULL records as well
+o>count of distinct NAME considering NULL records as well
+
+CREATE TABLE STUD1(ID NUMBER,NAME VARCHAR2(10));
+INSERT INTO STUD1 VALUES(NULL,'A');
+INSERT INTO STUD1 VALUES(1,NULL);
+INSERT INTO STUD1 VALUES(NULL,NULL);
+
+Select * from STUD1 Where ID IS NULL;
+
+Select * from STUD1 Where NAME IS NULL;
+
+Select * from STUD1 Where ID IS NOT NULL;
+
+Select * from STUD1 Where NAME IS NOT NULL;
+
+Select * from STUD1 Where ID IS NULL and NAME IS NULL;
+
+Select * from STUD1 Where ID IS NULL OR NAME IS NULL;
+
+Select Count(*) from STUD1 Where ID IS NULL;
+
+Select Count(*) from STUD1 Where NAME IS NULL;
+
+Select Count(*) from STUD1 Where ID IS NULL AND NAME IS NULL;
+
+Select distinct ID from STUD1;
+
+Select distinct NAME from STUD1;
+
+Select Count (distinct ID) from STUD1;
+
+Select Count (distinct NAME) from STUD1;
+
+Select Count (distinct NVL(ID, 0)) from STUD1;
+
+Select Count (distinct NVL (NAME, 'NA')) from STUD1;
+
+-----------------------------------------------------------------------------------------------------------------------------
